@@ -1,1 +1,1 @@
-![alt text](assets/hello_c_output.png)
+![hello.c output](assets/hello_c_output.jpg)
