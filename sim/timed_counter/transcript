@@ -1,0 +1,8 @@
+# Compile of timed_counter_tb.vhd failed with 6 errors.
+# Compile of tp_pkg.vhd was successful.
+# Compile of print_pkg.vhd failed with 3 errors.
+# Compile of assert_pkg.vhd failed with 31 errors.
+# Compile of timed_counter.vhd failed with 1 errors.
+# 5 compiles, 4 failed with 41 errors.
+# Compile of timed_counter.vhd failed with 1 errors.
+# Compile of timed_counter.vhd failed with 1 errors.
