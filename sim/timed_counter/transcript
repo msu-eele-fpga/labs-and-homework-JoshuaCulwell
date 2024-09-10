@@ -1,0 +1,221 @@
+# Compile of timed_counter_tb.vhd was successful with warnings.
+vsim work.timed_counter_tb
+# vsim work.timed_counter_tb 
+# Start time: 11:06:25 on Sep 10,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.print_pkg(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.float_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading ieee.float_pkg
+# Loading work.assert_pkg(body)
+# Loading work.tb_pkg(body)
+# Loading work.timed_counter_tb(testbench)
+# Loading work.timed_counter(timed_counter_arch)
+add wave -position end  sim:/timed_counter_tb/done_100ns_tb
+add wave -position end  sim:/timed_counter_tb/enable_100ns_tb
+add wave -position end  sim:/timed_counter_tb/clk_tb
+run
+# Testing 100 ns timer: enabled
+# ** Failure: error in test case 'counter is done'
+#    Time: 131 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+run
+# Testing 100 ns timer twice: disabled
+# Testing 100 ns timer: enabled
+# ** Failure: error in test case 'counter is done'
+#    Time: 491 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+run
+# Testing 100 ns timer twice: disabled
+# Testing 100 ns timer: enabled
+# ** Failure: error in test case 'counter is done'
+#    Time: 851 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+# Compile of timed_counter.vhd failed with 2 errors.
+# Compile of timed_counter.vhd failed with 1 errors.
+# Compile of timed_counter.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter(timed_counter_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# ** Failure: error in test case 'counter not enabled'
+#    Time: 151 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+run
+# ** Failure: error in test case 'counter not enabled'
+#    Time: 171 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+run
+# ** Failure: error in test case 'counter not enabled'
+#    Time: 191 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+run
+# ** Failure: error in test case 'counter not enabled'
+#    Time: 211 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+run
+# ** Failure: error in test case 'counter not enabled'
+#    Time: 231 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+# Compile of timed_counter.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter(timed_counter_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# ** Failure: error in test case 'counter not enabled'
+#    Time: 151 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+# Compile of timed_counter.vhd failed with 1 errors.
+# Compile of timed_counter.vhd failed with 1 errors.
+# Compile of timed_counter.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter(timed_counter_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 100 ns timer: enabled
+# Compile of timed_counter_tb.vhd was successful with warnings.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter_tb(testbench)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Compile of timed_counter_tb.vhd was successful with warnings.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter_tb(testbench)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# ** Failure: error in test case 'counter is done'
+#    Time: 591 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+# Compile of timed_counter.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter(timed_counter_arch)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Compile of timed_counter_tb.vhd failed with 1 errors.
+# Compile of timed_counter_tb.vhd was successful with warnings.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter_tb(testbench)
+add wave -position end  sim:/timed_counter_tb/enable_240ns_tb
+add wave -position end  sim:/timed_counter_tb/done_240ns_tb
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Testing 240 ns timer: enabled
+# ** Failure: error in test case 'counter is done'
+#    Time: 991 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+# Compile of timed_counter_tb.vhd was successful with warnings.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.timed_counter_tb(testbench)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Testing 240 ns timer: enabled
+# Testing 240 ns timer twice: disabled
+# Testing 3 loops of 240 ns timer: enabled
+run
+# Testing 100 ns timer: enabled
+# ** Failure: error in test case 'counter not done'
+#    Time: 2771 ns  Iteration: 0  Process: /timed_counter_tb/stimuli_and_checker File: C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd
+# Break in Subprogram assert_that at C:/Users/getro/Desktop/School/d_senior/fpgas/labs-and-homework-JoshuaCulwell/sim/common/assert_pkg.vhd line 63
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Testing 240 ns timer: enabled
+# Testing 240 ns timer twice: disabled
+# Testing 3 loops of 240 ns timer: enabled
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Testing 240 ns timer: enabled
+# Testing 240 ns timer twice: disabled
+# Testing 3 loops of 240 ns timer: enabled
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Testing 240 ns timer: enabled
+# Testing 240 ns timer twice: disabled
+# Testing 3 loops of 240 ns timer: enabled
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Testing 100 ns timer: enabled
+# Testing 100 ns timer twice: disabled
+# Testing 3 loops of 100 ns timer: enabled
+# Testing 240 ns timer: enabled
+# Testing 240 ns timer twice: disabled
+# Testing 3 loops of 240 ns timer: enabled
