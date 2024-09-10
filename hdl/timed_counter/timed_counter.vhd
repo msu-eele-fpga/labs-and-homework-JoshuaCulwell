@@ -20,14 +20,16 @@ architecture timed_counter_arch of timed_counter is
 
 begin
 	process(clk)
-		if(enable = true) then
-			if(rising_edge(clk) and count /= COUNTER_LIMIT) then
-				count = counter + 1;
+	begin
+		if(enable) then
+			if(rising_edge(clk)) then
+				count <= count + 1;
 			end if;
 		end if;
 	end process;
 
 	process(clk)
+	begin
 		if(count = COUNTER_LIMIT) then
 			done <= true;
 		else
