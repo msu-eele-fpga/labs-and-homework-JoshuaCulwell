@@ -22,9 +22,11 @@ begin
 	process(clk)
 	begin
 		if(enable) then
-			if(rising_edge(clk)) then
+			if(rising_edge(clk) and count /= COUNTER_LIMIT) then
 				count <= count + 1;
+			elsif(rising_edge(clk)) then count <= 0;
 			end if;
+		else count <= 0;
 		end if;
 	end process;
 
