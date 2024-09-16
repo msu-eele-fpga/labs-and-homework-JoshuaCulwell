@@ -42,17 +42,18 @@ architecture async_conditioner_arch of async_conditioner is
 	end component;
 
 	constant CLK_PERIOD : time := 20 ns;
-	constant DEBOUNCE_TIME : time := 1000 ns;
+	constant DEBOUNCE_TIME : time := 100 ns;
 
 	signal sync_input : std_ulogic;
 	signal debounced : std_ulogic;
 
 begin
-	SYNCHRONIZER : synchronizer port map (clk => clk, async => async, sync => sync_input);
-	DEBOUNCER : debouncer
-		generic map(clk_period => CLK_PERIOD, debounce_time => DEBOUNCE_TIME);
+	SYNCHRONIZER_component : synchronizer port map (clk => clk, async => async, sync => sync_input);
+	DEBOUNCER_component : debouncer
+		generic map(clk_period => CLK_PERIOD, debounce_time => DEBOUNCE_TIME)
 		port map(clk => clk, rst => rst, input => sync_input, debounced => debounced);
-	ONE_PULSE : one_pulse port map (clk => clk, rst => rst, input => debounced, pulse => sync);
+	ONE_PULSE_component : one_pulse port map (clk => clk, rst => rst, input => debounced, pulse => sync);
+end architecture;
 
 
 

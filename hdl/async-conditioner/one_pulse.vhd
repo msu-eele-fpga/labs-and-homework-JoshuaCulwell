@@ -15,7 +15,9 @@ architecture one_pulse_arch of one_pulse is
 begin
 	process(clk, rst)
 	begin
-		if(rst = '1') then pulse <= '0';
+		if(rst = '1') then 
+			pulse <= '0';
+			pulsed <= false;
 		elsif(rising_edge(clk) and input = '1' and not pulsed) then
 			pulse <= '1';
 			pulsed <= true;
