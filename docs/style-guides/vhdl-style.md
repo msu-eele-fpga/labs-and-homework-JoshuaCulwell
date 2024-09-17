@@ -22,6 +22,9 @@ All VHDL keywords should be lowercase.
 ### All others
 Everything identifier besides constants should be `snake_case` (e.g., entity names, signal names, architecture names, etc.).
 
+### Active-low signals
+Active-low signals (i.e., signals where a '0' is on/true/active) should be suffixed by `_n`, e.g., `reset_n`. This way we always know if the signal is active-high or active-low.
+
 ## Formatting
 
 ### Indentation
