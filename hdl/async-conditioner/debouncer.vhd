@@ -27,13 +27,15 @@ begin
 
 	COUNTER : process (clk, enable_counter)
 	begin
-		if (enable_counter and rising_edge(clk) and count < COUNTER_LIMIT) then
-			count <= count + 1;
-			done <= false;
-		elsif (count >= COUNTER_LIMIT and rising_edge(clk)) then
-			count <= 1;
-			done <= true;
-		elsif (enable_counter = false) then count <= 1;
+		if(rising_edge(clk)) then
+			if (enable_counter and count < COUNTER_LIMIT) then
+				count <= count + 1;
+				done <= false;
+			elsif (count >= COUNTER_LIMIT) then
+				count <= 1;
+				done <= true;
+			elsif (enable_counter = false) then count <= 1;
+			end if;
 		end if;
 	end process;
 			
