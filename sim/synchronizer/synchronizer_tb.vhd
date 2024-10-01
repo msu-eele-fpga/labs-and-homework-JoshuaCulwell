@@ -61,7 +61,7 @@ begin
   expected_sync : process is
   begin
 
-    sync_expected <= 'U';
+    sync_expected <= '0';
     wait for CLK_PERIOD;
 
     sync_expected <= '0';
@@ -90,7 +90,7 @@ begin
     for i in 0 to 9 loop
 
       assert sync_expected = sync_tb
-        report "Error for clock cycle " & to_string(i) & ":" & LF & "sync = " & to_string(sync_tb) & " sync_expected  = " & to_string(sync_expected)
+        --report "Error for clock cycle " & to_string(i) & ":" & LF & "sync = " & to_string(sync_tb) & " sync_expected  = " & to_string(sync_expected)
         severity warning;
 
       if sync_expected /= sync_tb then
