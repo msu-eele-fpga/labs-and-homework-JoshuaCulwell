@@ -42,15 +42,32 @@ architecture led_patterns_arch of led_patterns is
 	signal state_4_counter : unsigned(8 downto 0) := "000000001";
 	signal led_output_1 : std_ulogic_vector(6 downto 0) := "0000001";
 	signal led_output_2 : std_ulogic_vector(6 downto 0) := "0000011";
-	signal led_7_output : std_ulogic := '0';
+	signal led_7_output : std_ulogic;
 	
 	signal pulse : std_ulogic := '0';
+	
+	signal lab_5_clock_div : std_ulogic := '0';
+	signal lab_5_count : unsigned(38 downto 0) := to_unsigned(1, 39);
 	
 begin
 	one_base_period <= to_unsigned((1 sec / system_clock_period) / 16, 31) * base_period;
 
-	--conditioner : async_conditioner port map(clk => clk, rst => rst, async => push_button, sync => pulse);
-	pulse <= push_button;
+	conditioner : async_conditioner port map(clk => clk, rst => rst, async => push_button, sync => pulse);
+	
+	LAB_5_CLOCK : process(clk, rst)
+	begin
+		if (rst = '1') then
+			lab_5_count <= to_unsigned(0, 39);
+			
+		elsif (rising_edge(clk)) then
+			if (lab_5_count < one_base_period / 16) then
+				lab_5_count <= lab_5_count + 1;
+			elsif (lab_5_count >= one_base_period / 16) then
+				lab_5_clock_div <= not lab_5_clock_div;
+			end if;
+		end if;
+	end process;
+	
 	COUNTER_STATES : process (clk, rst)
 	begin
 		if (rst = '1') then
@@ -168,6 +185,6 @@ begin
 			end if;
 		end if;
 		
-		led(7) <= led_7_output;
+		led(7) <= lab_5_clock_div; --led_7_output;
 	end process;	
 end architecture;
