@@ -46,10 +46,28 @@ architecture led_patterns_arch of led_patterns is
 	
 	signal pulse : std_ulogic := '0';
 	
+	signal lab_5_clock_div : std_ulogic := '0';
+	signal lab_5_count : unsigned(38 downto 0) := to_unsigned(1, 39);
+	
 begin
 	one_base_period <= to_unsigned((1 sec / system_clock_period) / 16, 31) * base_period;
 
 	conditioner : async_conditioner port map(clk => clk, rst => rst, async => push_button, sync => pulse);
+	
+	LAB_5_CLOCK : process(clk, rst)
+	begin
+		if (rst = '1') then
+			lab_5_count <= to_unsigned(0, 39);
+			
+		elsif (rising_edge(clk)) then
+			if (lab_5_count < one_base_period / 16) then
+				lab_5_count <= lab_5_count + 1;
+			elsif (lab_5_count >= one_base_period / 16) then
+				lab_5_clock_div <= not lab_5_clock_div;
+				lab_5_count <= to_unsigned(0, 39);
+			end if;
+		end if;
+	end process;
 	
 	COUNTER_STATES : process (clk, rst)
 	begin
@@ -168,6 +186,6 @@ begin
 			end if;
 		end if;
 		
-		led(7) <= led_7_output;
+		led(7) <= lab_5_clock_div; --led_7_output;
 	end process;	
 end architecture;
