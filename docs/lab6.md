@@ -9,17 +9,17 @@ This overall system is to control LEDs. There are 2 main parts that control the 
 ![block diagram](assets/updated_block_diagram.jpg)
 
 ### Register Map:
-Registers Created:
+#### Registers Created:
 - led_reg
 - base_period
 - hps_led_control
 
-Bitfield Diagrams:
+#### Bitfield Diagrams:
 - led_reg:[0 upto 7][8 upto 31......................]:undefined
 - base_period:[0 upto 7][8 upto 31......................]:undefined
 - hps_led_control:[0][1 upto 31...........................]:undefined
 
-How to Read/Write:
+#### How to Read/Write:
 Addresses:
 - 00 - base_period
 - 01 - led_reg
@@ -36,7 +36,7 @@ to write:
 - set avs_writedata to the desired value to store in the register
 
 ### Platform Designer:
-Questions:
+#### Questions:
 How did you connect these registers to the ARM CPU's in the HPS?
 - This was done by adding a signal assignment in the component instantiation in Platform Designer.
 
