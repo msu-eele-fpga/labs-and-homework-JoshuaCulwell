@@ -15,14 +15,14 @@ Registers Created:
 - hps_led_control
 
 Bitfield Diagrams:
-led_reg:      [0 upto 7][8 upto 31                      ]
-               led_reg    undefined
+- led_reg:      [0 upto 7][8 upto 31......................]
+                 led_reg     undefined
 
-base_period   [0 upto 7][8 upto 31                      ]
-             base_period  undefined
+- base_period   [0 upto 7][8 upto 31......................]
+                base_period  undefined
 
-hps_led_control [0][1 upto 31                           ]
-         hps_led_control  undefined
+- hps_led_control [0][1 upto 31...........................]
+            hps_led_control  undefined
 
 How to Read/Write:
 Addresses:
