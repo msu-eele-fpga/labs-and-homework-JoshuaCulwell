@@ -21,9 +21,9 @@ Bitfield Diagrams:
 
 How to Read/Write:
 Addresses:
-00 - base_period
-01 - led_reg
-10 - hps_led_control
+- 00 - base_period
+- 01 - led_reg
+- 10 - hps_led_control
 
 To read:
 - set avs_read to '1'
