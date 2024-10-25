@@ -45,7 +45,7 @@ architecture led_patterns_avalon_arch of led_patterns_avalon is
 begin
 	LED_PATTERN_COMPONENT : led_patterns
 		generic map (system_clock_period => 20 ns)
-		port map (clk => clk, rst => rst, push_button => not push_button, switches => switches, hps_led_control => hps_led_control_bool, base_period => base_period, led_reg => led_reg, std_logic_vector(led) => led);
+		port map (clk => clk, rst => rst, push_button => push_button, switches => switches, hps_led_control => hps_led_control_bool, base_period => base_period, led_reg => led_reg, std_logic_vector(led) => led);
 	
 	process (hps_led_control)
 	begin
