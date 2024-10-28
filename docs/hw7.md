@@ -21,6 +21,7 @@ output:
 
 ### Question 3:
 ```
+wc -l lorem-ipsum.txt
 ```
 
 output:
@@ -28,6 +29,7 @@ output:
 
 ### Question 4:
 ```
+
 ```
 
 output:
@@ -35,6 +37,7 @@ output:
 
 ### Question 5:
 ```
+
 ```
 
 output:
@@ -42,6 +45,7 @@ output:
 
 ### Question 6:
 ```
+cut -d, -f3 log.csv
 ```
 
 output:
@@ -49,6 +53,7 @@ output:
 
 ### Question 7:
 ```
+cut -d, -f2,3 log.csv
 ```
 
 output:
@@ -56,13 +61,15 @@ output:
 
 ### Question 8:
 ```
+cut -d, -f1,4 log.csv
 ```
 
 output:
 ![question8](./assets/hw7_questions/question8.jpg)
 
-### Question 2:
+### Question 9:
 ```
+head -n 3 gibberish.txt
 ```
 
 output:
@@ -70,6 +77,7 @@ output:
 
 ### Question 10:
 ```
+tail -n 2 gibberish.txt
 ```
 
 output:
@@ -77,6 +85,7 @@ output:
 
 ### Question 11:
 ```
+tail -n +2 log.csv
 ```
 
 output:
@@ -84,6 +93,7 @@ output:
 
 ### Question 12:
 ```
+grep -i 'and' gibberish.txt
 ```
 
 output:
@@ -91,6 +101,7 @@ output:
 
 ### Question 13:
 ```
+grep -i ' we ' gibberish.txt
 ```
 
 output:
@@ -98,6 +109,7 @@ output:
 
 ### Question 14:
 ```
+grep -o -E 'to [a-zA-Z]+' gibberish.txt
 ```
 
 output:
@@ -105,6 +117,7 @@ output:
 
 ### Question 15:
 ```
+grep -c 'FPGAs' fpgas.txt
 ```
 
 output:
@@ -112,6 +125,7 @@ output:
 
 ### Question 16:
 ```
+grep -E '\b(hot|not|cower|tower|smile|compile)' fpgas.txt
 ```
 
 output:
@@ -119,6 +133,7 @@ output:
 
 ### Question 17:
 ```
+grep -r -P '\-\-' --include="*.vhd" hdl -c
 ```
 
 output:
@@ -126,6 +141,7 @@ output:
 
 ### Question 18:
 ```
+ls > ls-putput.txt; cat ls-oputput.txt
 ```
 
 output:
@@ -133,6 +149,7 @@ output:
 
 ### Question 19:
 ```
+dmesg | grep 'CPU'
 ```
 
 output:
@@ -140,6 +157,15 @@ output:
 
 ### Question 20:
 ```
+find hdl -iname '*.vhd' | wc -l
+```
+
+output:
+![question20](./assets/hw7_questions/question20.jpg)
+
+### Question 21:
+```
+grep -roh --include="*.vhd" -- '\-\-' ./hdl | wc -l
 ```
 
 output:
@@ -147,6 +173,7 @@ output:
 
 ### Question 22:
 ```
+grep -n 'FPGAs' fpgas.txt
 ```
 
 output:
@@ -154,7 +181,8 @@ output:
 
 ### Question 23:
 ```
+du -a -h . | sort -h -r | head -n 3
 ```
 
 output:
-![question23](./assets/hw7_questions/question23.jpg)
+![question23](.assets/hw7_questions/question23.jpg)
