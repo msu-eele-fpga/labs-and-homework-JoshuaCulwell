@@ -185,4 +185,4 @@ du -a -h . | sort -h -r | head -n 3
 ```
 
 output:
-![question23](.assets/hw7_questions/question23.jpg)
+![question23](assets/hw7_questions/question23.jpg)
