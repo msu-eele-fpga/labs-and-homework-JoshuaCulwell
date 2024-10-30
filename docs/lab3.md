@@ -6,7 +6,7 @@ In this lab we set up the linux vm and the DE10nano to communicate effectively a
 ## Deliverables
 ### Screenshots of hello.c:
 On the vm:
-![hello.c](assets/lab_3_hello_screenshot)
+![hello.c](assets/lab_3_hello_screenshot.jpg)
 
 On the FPGA:
-![hello.c](assets/lab_3_hello_screenshot_de10nano)
+![hello.c](assets/lab_3_hello_screenshot_de10nano.jpg)
