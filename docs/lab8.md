@@ -19,7 +19,7 @@ You MUST have the FPGA fabric programmed with the soc_system.rbf OR the de10nano
 3. If it is found you do not have access to that command execute the command: ```sudo apt install gcc-arm-linux-gnueabihf``` then repeat step 1.
 
 ### Extra deliverables
-[link to led-patterns](https://github.com/msu-eele-fpga/labs-and-homework-JoshuaCulwell/sw/led-patterns)
+[link to led-patterns](https://github.com/msu-eele-fpga/labs-and-homework-JoshuaCulwell/blob/main/sw/led-patterns/README.md)
 
 How I calculated the physical addresses of my components registers:
 - First was the offset given in the lab-7 modified instructions: 0xff200000
