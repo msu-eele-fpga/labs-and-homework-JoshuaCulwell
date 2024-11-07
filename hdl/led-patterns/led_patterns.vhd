@@ -116,6 +116,7 @@ begin
 					end if;
 					
 					led(6 downto 0) <= "000" & switches;
+					led(7) <= led_7_output;
 				when s0 => 
 					counter_limit <= one_base_period / 2; -- 1/2 base period
 					
@@ -125,6 +126,7 @@ begin
 					end if;
 					
 					led(6 downto 0) <= led_output_1;
+					led(7) <= led_7_output;
 				when s1 =>
 					counter_limit <= one_base_period / 4; -- 1/4 base period
 					
@@ -134,6 +136,7 @@ begin
 					end if;
 					
 					led(6 downto 0) <= led_output_2;
+					led(7) <= led_7_output;
 				when s2 =>
 					counter_limit <= one_base_period(36 downto 0) * to_unsigned(2, 2); -- 2 base period
 					
@@ -143,6 +146,7 @@ begin
 					end if;
 					
 					led(6 downto 0) <= std_ulogic_vector(state_counter);
+					led(7) <= led_7_output;
 				when s3 =>
 					counter_limit <= one_base_period / 8; -- 1/8 base period
 				
@@ -152,6 +156,7 @@ begin
 					end if;
 					
 					led(6 downto 0) <= std_ulogic_vector(state_counter);
+					led(7) <= led_7_output;
 				when s4 =>
 					counter_limit <= one_base_period / 16; -- 1/16 base period
 					
@@ -160,14 +165,13 @@ begin
 					elsif (done and state_4_counter >= 127) then state_4_counter <= to_unsigned(1, 9);
 					end if;
 					
-					led(6 downto 0) <= std_ulogic_vector(state_4_counter(6 downto 0));				
+					led(6 downto 0) <= std_ulogic_vector(state_4_counter(6 downto 0));
+					led(7) <= led_7_output;				
 				when arm => led <= led_reg;
 			end case;
 			
 			if done_led7 then led_7_output <= not led_7_output;
 			end if;
 		end if;
-		
-		led(7) <= led_7_output;
 	end process;	
 end architecture;
