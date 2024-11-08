@@ -88,9 +88,7 @@ int main(int argc, char ** argv){
 		if(p_read){
 			for(int i = 2 + argc_offset; i < argc; i+= 2){
 				printf("LED pattern = ");
-				char str_number[10];
-				strncpy(str_number, argv[i]+(2), strlen(argv[i]));
-				int num = atoi(str_number);
+				int num = strtol(argv[i], NULL, 16);
 				for(int i = 0; i < 8; i++){
 					if(num & 128 >> i){
 						printf("%d", 1);
@@ -108,9 +106,7 @@ int main(int argc, char ** argv){
 			while(fgets(file_line, 100, fptr)){
 				printf("LED pattern = ");
 				char *token = strtok(file_line, " ");
-				char str_number[10];
-				strncpy(str_number, token+(2), strlen(token));
-				int num = atoi(str_number);
+				int num = strtol(token, NULL, 16);
 				for(int i = 0; i < 8; i++){
 					if(num & 128 >> i){
 						printf("%d", 1);
