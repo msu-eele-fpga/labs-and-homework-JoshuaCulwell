@@ -7,18 +7,7 @@ There is also a -h flag for more in depth description.
 
 The program writes a pattern to the LEDs then waits for its respective duration before writing the next pattern or looping the patterns.
 
-## Deliverables
-### NOTE:
-You MUST have the FPGA fabric programmed with the soc_system.rbf OR the de10nano Quartus project prior to using led_patterns.
-### Usage:
-![usage_text](assets/usage_text.jpg)
-
-### How to compile:
-1. Type the following command while in the directory of led_patterns.c: ```arm-linux-gnueabihf-gcc -o led_patterns -Wall -static led_patterns.c```
-2. Compilation done.
-3. If it is found you do not have access to that command execute the command: ```sudo apt install gcc-arm-linux-gnueabihf``` then repeat step 1.
-
-### Extra deliverables
+### Deliverables
 [link to led-patterns](https://github.com/msu-eele-fpga/labs-and-homework-JoshuaCulwell/blob/main/sw/led-patterns/README.md)
 
 How I calculated the physical addresses of my components registers:
