@@ -1,29 +1,16 @@
-# Submission template
-
-Use this template for lab and homework submissions. 
-
-A few assignments require a more in-depth report; those assignments will give directions on additional formatting and requirements.
-
-The template is found below the horizontal rule.
-
----
-
-# Name of lab or homework assignment (e.g., Lab 7: Verifying Your Custom Component Using System Console and `/dev/mem`)
+# Homework 8: hw8_hello_world_lkm -- Linux Kernel Modules
 
 ## Overview
-Give a brief summary of what the assignment was about and what you did.
+In this homework we went over how to create a linux kernel modeule then created a hello world module that prints "Hello, world" when loaded then "Goodbye, cruel world" when unloaded.
 
 ## Deliverables
-For any deliverables that are *not source code* (e.g., screenshots, answering questions), put those deliverables in this section.
+### Loading and unloading in the kernel log buffer:
+![kernel log buffer](assets/hello_world_kernel.jpg)
 
-### Questions 
-If the deliverables include questions you need to answer, put the answers here. Use blockquotes to indicate the question, then answer underneath the blockquote. Example formatting is shown below.
+### Modinfo on the kernel module:
+![modinfo](assets/modinfo.jpg)
 
-> What is your favorite thing about SoC FPGAs?
-
-Everything!!!
-
-> What is the base address of your component? 
-
-0xDEADBEEF
+### ```uname``` for soc and vm:
+![soc uname](assets/uname_soc.jpg)
+![vm uname](assets/uname_vm.jpg)
 
