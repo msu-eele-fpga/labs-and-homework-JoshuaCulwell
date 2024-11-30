@@ -1,29 +1,29 @@
-# Submission template
-
-Use this template for lab and homework submissions. 
-
-A few assignments require a more in-depth report; those assignments will give directions on additional formatting and requirements.
-
-The template is found below the horizontal rule.
-
----
-
-# Name of lab or homework assignment (e.g., Lab 7: Verifying Your Custom Component Using System Console and `/dev/mem`)
+# Lab 11: Platform Device Drivers
 
 ## Overview
-Give a brief summary of what the assignment was about and what you did.
-
-## Deliverables
-For any deliverables that are *not source code* (e.g., screenshots, answering questions), put those deliverables in this section.
+In this lab we created a kernel module that creates drivers for the led patterns FPGA component.
 
 ### Questions 
-If the deliverables include questions you need to answer, put the answers here. Use blockquotes to indicate the question, then answer underneath the blockquote. Example formatting is shown below.
+> What is the purpose of the platform bus?
 
-> What is your favorite thing about SoC FPGAs?
+The platform bus is a virtual bus which is used to connect different devices to the kernel
 
-Everything!!!
+> Why is the device driver's compatible property important?
 
-> What is the base address of your component? 
+The compatible property is important because it tells the device tree which driver to use.
 
-0xDEADBEEF
+> What is the ```probe``` function's purpose?
 
+The ```probe``` function is used to "search" for devices and initialize them if found when the module is added.
+
+> How does your driver know what memory addresses are associated with your device?
+
+The driver knows what memory addresses are associated with the device because in the device tree for that device the address and span are instanciated.
+
+> What are the two ways we can write our device's registers? In other words, what subsystems do we use to write to our registers?
+
+The two ways to write to our device's registers are using the ```misc subsystem``` or by writing values to the appropriate location in the ```/dev/led_patterns``` file. 
+
+> What is the purpose of our struct ```led_patterns_dev``` state container?
+
+The purpose of the ```led_patterns_dev``` struct is to hold information necessary for each subsystem so that the functions in the kernel driver can use them. 
